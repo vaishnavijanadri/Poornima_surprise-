@@ -1,0 +1,100 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Arial,Helvetica,sans-serif;background:#120b18;color:#fff}
+.bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#ff5ca833,transparent 30%),radial-gradient(circle at 80% 70%,#8b5cf633,transparent 35%),linear-gradient(135deg,#120b18,#24102b 55%,#120b18);z-index:-3}
+.bg:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 0 45%,#ffffff05 50%,transparent 55%);animation:shine 8s linear infinite}
+.sparkles{position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(#fff8 1px,transparent 1px);background-size:70px 70px;opacity:.2;animation:stars 12s linear infinite}
+@keyframes shine{to{transform:translateX(30%)}}
+@keyframes stars{to{transform:translateY(-70px)}}
+#celebration{
+ position:fixed;
+ inset:0;
+ width:100vw;
+ height:100vh;
+ pointer-events:none;
+ z-index:30;
+}
+#burstLayer{
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:31;
+}
+#app{
+ height:100vh;
+ width:100vw;
+ position:relative;
+ z-index:10;
+}
+.screen{
+ position:absolute;
+ inset:0;
+ display:flex;
+ visibility:hidden;
+ pointer-events:none;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+ text-align:center;
+ padding:55px 7vw 80px;
+ opacity:0;
+ transform:scale(1.04);
+ transition:opacity .55s ease,transform .7s ease,visibility 0s linear .55s;
+ z-index:11;
+}
+.screen.active{
+ visibility:visible;
+ pointer-events:auto;
+ opacity:1;
+ transform:scale(1);
+ transition:opacity .55s ease,transform .7s ease;
+}
+.small,.chapter{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#f8b8d9;margin-bottom:18px}
+h1,h2{font-family:Georgia,serif;font-weight:700;margin:0}
+.intro h1{font-size:clamp(50px,9vw,105px);line-height:.92}
+.intro h1 span{font-size:.42em;color:#ff9fce;letter-spacing:2px}
+.intro p{font-size:19px;line-height:1.7;color:#e9dce9;margin:28px 0}
+.tiny{margin-top:22px;font-size:12px;color:#a99aaa}
+.main-btn,.next-btn{border:0;border-radius:999px;padding:15px 26px;font-weight:700;letter-spacing:1.5px;cursor:pointer;transition:.25s}
+.main-btn{background:#fff;color:#251128;box-shadow:0 10px 35px #0005}
+.next-btn{margin-top:22px;background:#ffffff12;color:#fff;border:1px solid #ffffff35;backdrop-filter:blur(10px)}
+.main-btn:hover,.next-btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px #0006}
+.card{max-width:680px;padding:40px;border:1px solid #ffffff20;background:#ffffff0b;backdrop-filter:blur(18px);border-radius:30px;box-shadow:0 30px 90px #0005}
+.card .icon{font-size:50px;margin-bottom:12px}
+.card h2{font-size:clamp(30px,5vw,52px);margin-bottom:22px}
+.card p,.letter p{font-size:16px;line-height:1.8;color:#eadfea}
+.media img,.media video{max-width:min(78vw,720px);max-height:62vh;border-radius:25px;object-fit:contain;box-shadow:0 30px 90px #0008;border:1px solid #ffffff22;background:#000}
+.caption{max-width:700px;margin-top:18px;font-size:17px;color:#f3e6f2}
+.video-screen video{width:min(78vw,760px)}
+.song-screen{z-index:12}.song-screen h2{font-size:46px;color:#fff}.song-screen p{font-size:18px;color:#eadfea}
+.song-screen p{line-height:1.7;color:#eadfea}
+.record-wrap{width:210px;height:210px;margin:4px 0 25px;display:grid;place-items:center}
+.record{width:190px;height:190px;border-radius:50%;background:repeating-radial-gradient(circle,#17121b 0 3px,#29212e 4px 5px);border:7px solid #0c0910;box-shadow:0 20px 50px #0009;position:relative}
+.record:after{content:"MODALASALA";position:absolute;inset:45px;border-radius:50%;display:grid;place-items:center;background:#ff8fc4;color:#2b1025;font-size:10px;font-weight:bold}
+.record .hole{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2}
+.record.playing{animation:spin 2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none!important}
+.letter{max-width:760px;max-height:62vh;overflow:auto;text-align:left;padding:34px 38px;border-radius:28px;background:#fff8;border:1px solid #ffffff40;color:#261526;box-shadow:0 25px 80px #0007}
+.letter h2{font-size:34px;color:#251526;margin-bottom:18px}
+.letter p{color:#332534;margin:0 0 13px}
+.sign{font-family:cursive;font-size:22px;color:#8d2b63;margin-top:20px}
+.screen > *{position:relative;z-index:2}.final-screen h1{font-size:clamp(24px,4vw,48px);max-width:900px;line-height:1.15}
+.final-screen h2{font-size:clamp(40px,7vw,78px);margin-top:18px;line-height:.98}
+.final-screen h2 span{color:#ff9dcc}
+.final-heart{font-size:70px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+.final-name{margin:25px 0 5px;color:#ffc4df;font-size:18px;letter-spacing:2px}
+.forever{color:#e6d5e4}
+.funny{margin:25px 0;color:#fff;line-height:1.7;font-size:15px}
+.nav{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:2px;color:#cdbdce;z-index:20}
+.line{width:150px;height:2px;background:#ffffff20}
+.line i{display:block;height:100%;width:5%;background:#ff9fce;transition:.5s}
+@media(max-width:600px){
+ .screen{padding:35px 20px 65px}
+ .card{padding:28px 22px}
+ .media img,.media video{max-width:90vw;max-height:55vh}
+ .letter{max-height:58vh;padding:25px 22px}
+ .nav{bottom:10px}
+ .line{width:100px}
+}

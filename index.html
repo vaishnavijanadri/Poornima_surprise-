@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise from ur sas 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="celebration"></canvas>
+<div class="burst-layer" id="burstLayer"></div>
+<div class="bg"></div>
+<div class="sparkles"></div>
+
+<main id="app">
+
+  <!-- INTRO -->
+  <section class="screen active intro" data-screen="0">
+    <div class="small">A PRIVATE LITTLE WORLD FOR</div>
+    <h1>Poornima<br><span>♡ Pookie ♡</span></h1>
+    <p>From your best neighbour,<br>your Vaishiii. 🥹</p>
+    <button class="main-btn" data-next>BEGIN THE STORY</button>
+    <div class="tiny">No scrolling. No boring album. Just one little story. ✨</div>
+  </section>
+
+  <!-- SECRET -->
+  <section class="screen" data-screen="1">
+    <div class="chapter">CHAPTER 01</div>
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h2>It started in our circle.</h2>
+      <p>Our first meeting was simply because we lived in the same circle. And somehow, two neighbours became the <b>best neighbours ever.</b></p>
+      <p>What started as a simple meeting slowly turned into countless conversations, laughter, memories, and a friendship I never want to lose.</p>
+    </div>
+    <button class="next-btn" data-next>OUR STORY CONTINUES →</button>
+  </section>
+
+  <!-- PHOTO 1 -->
+  <section class="screen media" data-screen="2">
+    <div class="chapter">MEMORY 01</div>
+    <img src="assets/photo01.jpeg" alt="Memory 1">
+    <div class="caption">One picture. A thousand little feelings. And somehow, it's always us. 🫶</div>
+    <button class="next-btn" data-next>NEXT MEMORY →</button>
+  </section>
+
+  <!-- PHOTO 2 -->
+  <section class="screen media" data-screen="3">
+    <div class="chapter">MEMORY 02</div>
+    <img src="assets/photo02.jpeg" alt="Memory 2">
+    <div class="caption">Different poses. Same Pookie. Same chaos. 😂❤️</div>
+    <button class="next-btn" data-next>KEEP GOING →</button>
+  </section>
+
+  <!-- VIDEO 1 -->
+  <section class="screen media video-screen" data-screen="4">
+    <div class="chapter">MEMORY 03 • MOVING</div>
+    <video controls playsinline preload="metadata" src="assets/video01.mp4"></video>
+    <div class="caption">Some memories don't stay still. 🎬❤️</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 3 -->
+  <section class="screen media" data-screen="5">
+    <div class="chapter">MEMORY 04</div>
+    <img src="assets/photo03.jpeg" alt="Memory 3">
+    <div class="caption">Some memories don't need colour to feel warm. Just you being you. 🖤</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 4 -->
+  <section class="screen media" data-screen="6">
+    <div class="chapter">MEMORY 05</div>
+    <img src="assets/photo04.jpeg" alt="Memory 4">
+    <div class="caption">Another little piece of our forever. ✨</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 5 -->
+  <section class="screen media" data-screen="7">
+    <div class="chapter">MEMORY 06</div>
+    <img src="assets/photo05.jpeg" alt="Memory 5">
+    <div class="caption">Random plans. Random pictures. Somehow all worth keeping. 🤍</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- VIDEO 2 -->
+  <section class="screen media video-screen" data-screen="8">
+    <div class="chapter">MEMORY 07 • MOVING</div>
+    <video controls playsinline preload="metadata" src="assets/video02.mp4"></video>
+    <div class="caption">Big smiles. Same two idiots. 😂</div>
+    <button class="next-btn" data-next>ANOTHER ONE →</button>
+  </section>
+
+  <!-- PHOTO 6 -->
+  <section class="screen media" data-screen="9">
+    <div class="chapter">MEMORY 08</div>
+    <img src="assets/photo06.jpeg" alt="Memory 6">
+    <div class="caption">Still my favourite kind of chaos. 😂❤️</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 7 -->
+  <section class="screen media" data-screen="10">
+    <div class="chapter">MEMORY 09</div>
+    <img src="assets/photo07.jpeg" alt="Memory 7">
+    <div class="caption">Some memories simply feel like home — because you're there. 🫶</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 8 -->
+  <section class="screen media" data-screen="11">
+    <div class="chapter">MEMORY 10</div>
+    <img src="assets/photo08.jpeg" alt="Memory 8">
+    <div class="caption">Another smile. Another reason I'm grateful life gave me you. 💕</div>
+    <button class="next-btn" data-next>WAIT… THERE'S MORE →</button>
+  </section>
+
+  <!-- VIDEO 3 -->
+  <section class="screen media video-screen" data-screen="12">
+    <div class="chapter">MEMORY 11 • LAST VIDEO</div>
+    <video controls playsinline preload="metadata" src="assets/video03.mp4"></video>
+    <div class="caption">Okay… last video. Probably. 😂</div>
+    <button class="next-btn" data-next>THE LAST MEMORIES →</button>
+  </section>
+
+  <!-- PHOTO 9 -->
+  <section class="screen media" data-screen="13">
+    <div class="chapter">MEMORY 12</div>
+    <img src="assets/photo09.jpeg" alt="Memory 9">
+    <div class="caption">The kind of picture that doesn't need an explanation. 🤍</div>
+    <button class="next-btn" data-next>NEXT →</button>
+  </section>
+
+  <!-- PHOTO 10 -->
+  <section class="screen media" data-screen="14">
+    <div class="chapter">MEMORY 13</div>
+    <img src="assets/photo10.jpeg" alt="Memory 10">
+    <div class="caption">Some ordinary days become special because we lived them together. 🌸</div>
+    <button class="next-btn" data-next>ONE MORE →</button>
+  </section>
+
+  <!-- PHOTO 11 -->
+  <section class="screen media" data-screen="15">
+    <div class="chapter">MEMORY 14</div>
+    <img src="assets/photo11.jpeg" alt="Memory 11">
+    <div class="caption">And this is where the memories stop… but our story doesn't. ♾️❤️</div>
+    <button class="next-btn" data-next>THE SONG →</button>
+  </section>
+
+  <!-- SONG -->
+  <section class="screen song-screen" data-screen="16">
+    <div class="chapter">THE SOUNDTRACK</div>
+    <div class="record-wrap">
+      <div class="record" id="record"><div class="hole"></div></div>
+    </div>
+    <h2>Modalasala</h2>
+    <p>This song makes you happy.<br>So obviously, it had to be here. ❤️</p>
+    <audio id="song" src="assets/song.mp3"></audio>
+    <button class="main-btn" id="songBtn">PLAY FROM THE MIDDLE 🎵</button>
+    <button class="next-btn hidden" id="afterSong">I HAVE SOMETHING TO SAY →</button>
+  </section>
+
+  <!-- LETTER -->
+  <section class="screen letter-screen" data-screen="17">
+    <div class="chapter">FROM VAISHIII</div>
+    <div class="letter">
+      <h2>Hey my Pookie,</h2>
+      <p>You are honestly one of the best things that happened to me. ❤️ Thank you for putting up with my nonsense, listening to my endless stories, laughing at my stupid jokes, and staying beside me through everything.</p>
+      <p>I don't think there was one particular day when we became best friends. Somewhere between all our random conversations, silly fights, shared secrets, endless laughter, and being there for each other, you became my person. 🥹❤️</p>
+      <p>Since we are born, we are the BESTFRIENDS. It feels like we've been best friends forever. Every year, every month, every little moment has added another beautiful memory to our story. ♾️❤️</p>
+      <p>Your ability to turn the smallest problem into a full-on breaking-news situation will never stop making me laugh. 😂 One minute everything is normal, and the next minute I'm getting a 27-minute explanation about what happened.</p>
+      <p>Lowdee. And I am so hungry. 😂</p>
+      <p>And I'll always remember what my mom once told you: <b>“Please, you both be together till the end.”</b> ❤️</p>
+      <p>I promise to keep annoying you, embarrassing you, making fun of you, listening to your endless stories, and supporting you through everything. 😂❤️</p>
+      <p>Forever my best friend. 🥹🫶♾️</p>
+      <div class="sign">— your Vaishiii ❤️</div>
+    </div>
+    <button class="next-btn" data-next>THE FINAL THING →</button>
+  </section>
+
+  <!-- FINAL -->
+  <section class="screen final-screen" data-screen="18">
+    <div class="small">THE END OF THE SURPRISE</div>
+    <div class="final-heart">❤️</div>
+    <h1>Some people come into your life and become memories…</h1>
+    <h2>You came into mine<br>and became <span>family.</span></h2>
+    <p class="final-name">Poornima C Kaddipudi</p>
+    <p class="forever">Forever my Pookie. Forever my best friend. ♾️</p>
+    <div class="funny">And if you ever forget how much you mean to me…<br>remember, I still chose you after seeing your TRUE form. 😂❤️</div>
+    <button class="main-btn" onclick="location.reload()">WATCH IT AGAIN ♡</button>
+  </section>
+
+</main>
+
+<div class="nav">
+  <span id="count">01</span>
+  <div class="line"><i id="line"></i></div>
+  <span>19</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
