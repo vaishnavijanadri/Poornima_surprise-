@@ -85,11 +85,36 @@ document.querySelectorAll("[data-next]").forEach(b=>{
   }, {passive:false});
 });
 
-songBtn.addEventListener("click",()=>{
-  if(!Number.isFinite(song.duration)||song.duration<=0){
-    song.addEventListener("loadedmetadata",startSong,{once:true});
-  }else startSong();
+songBtn.addEventListener("click", () => {
+  afterSong.classList.remove("hidden");
+
+  if (song.paused) {
+    if (!Number.isFinite(song.duration) || song.duration <= 0) {
+      song.addEventListener("loadedmetadata", startSong, { once: true });
+      song.load();
+    } else {
+      startSong();
+    }
+  } else {
+    song.pause();
+  }
 });
+
+function startSong() {
+  song.currentTime = song.duration / 2;
+
+  song.play()
+    .then(() => {
+      record.classList.add("playing");
+      songBtn.textContent = "PAUSE MODALASALA ⏸";
+      afterSong.classList.remove("hidden");
+    })
+    .catch((error) => {
+      console.log("Song could not play:", error);
+      afterSong.classList.remove("hidden");
+      songBtn.textContent = "PLAY MODALASALA 🎵";
+    });
+}
 function startSong(){
   song.currentTime=song.duration/2;
   song.play().then(()=>{
